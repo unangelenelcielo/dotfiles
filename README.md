@@ -14,13 +14,11 @@ Currently you need to have mate desktop environment installed before running ins
 * mate-notification-daemon
 
 To-Do:
-- [ ] Scripts to auto install dependencies based on diffenrent distros
+- [*] Scripts to auto install dependencies based on diffenrent distros
 - [ ] More color schemes and scripts to change them, currently only nord is available
 - [ ] Script to change font, currently iosevka is configured
 
-Debian stable dependencies:
-* fish kitty ranger bat diodon pasystray pavucontrol playerctl picom xscreensaver xscreensaver-data-extra xscreensaver-gl-extra rofi polybar i3-gaps arandr lxrandr lxappearance zathura feh nitrogen htop
-* A patched Nerd Font
+Review and run first install_offline.sh and then install_online.sh
 
 Some credits:
 * [github.com/polybar/polybar-scripts](github.com/polybar/polybar-scripts)

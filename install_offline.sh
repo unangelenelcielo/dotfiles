@@ -7,7 +7,7 @@ typeset -l install_nf
 if [ $install_nf = 'y' ]; then
 	git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git .ignore/
 	echo 'Installing nerd-fonts'
-	bash .ignore/nerd-fonts/install.sh
+	bash .ignore/nerd-fonts/install.sh -C
 else
 	echo 'Install at least Iosevka Nerd Font or change the font in .config files'
 fi
@@ -18,5 +18,10 @@ echo 'Dotfiles copied'
 
 echo 'Setting up network configuration:'
 sudo cp -v system/50-macrandomize.conf /etc/NetworkManager/conf.d/
-sudo rm -vf /etc/hostname
-sudo hostnamectl set-hostname --transient parrot
+loopbackName=$(cat /etc/hostname)
+sudo cp -v /dev/null /etc/hostname
+if [ -z '$loopbackName' ]; then
+    sudo hostnamectl set-hostname --transient localhost
+else
+    sudo hostnamectl set-hostname --transient $loopbackName
+fi

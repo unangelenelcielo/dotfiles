@@ -1,11 +1,4 @@
-#include ~/.config/i3/colors/nord
-# class                 border  backgr. text    indicator child_border
-client.focused          #434C5E #434C5E #A3BE8C #434C5E   #434C5E
-client.focused_inactive #2E3440 #2E3440 #8FBCBB #2E3440   #2E3440
-client.unfocused        #2E3440 #2E3440 #D8DEE9 #2E3440   #2E3440
-client.urgent           #2E3440 #2E3440 #BF616A #BF616A   #BF616A
-client.placeholder      #2E3440 #2E3440 #D8DEE9 #2E3440   #2E3440
-client.background       #D8DEE9
+include ~/.config/i3/colors/nord
 
 # border & title
 for_window [class="^.*"] border pixel 1, title_format "<b> %class >> %title </b>"
@@ -41,7 +34,7 @@ exec --no-startup-id mate-power-manager
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray --key-grabbing
 exec --no-startup-id picom -b
-exec --no-startup-id mate-screensaver
+#exec --no-startup-id mate-screensaver
 
 #############         Bindings           ##################
 
@@ -221,10 +214,10 @@ bindsym $Mod+o                   gaps outer all     minus 5
 ############    application settings   ############
 
 # assign applications to specific workspace
-assign [class="(?i)(?:virt-manager)"]  → 2
-assign [class="(?i)(?:kitty)"]   → 3
-assign [class="(?i)(?:firefox|chromium)"] → 4
-assign [class="(?i)(?:calibre|zathura)"] → 5
+assign [class="(?i)(?:virt-manager)"]  → 1
+assign [class="(?i)(?:kitty)"]   → 2
+assign [class="(?i)(?:firefox|chromium)"] → 3
+assign [class="(?i)(?:calibre|zathura)"] → 4
 
 # focus, floating, & sticky
 #for_window [class="(?i)(?:qt5ct|pinentry|firefox|geany|thunar)"] focus
