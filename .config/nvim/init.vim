@@ -1,3 +1,22 @@
+let maplocalleader = ","
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+set number
+set list listchars=tab:-→»,trail:ø,eol:↓
+
+"set expandtab
+"set autoindent
+"set softtabstop=4
+"set shiftwidth=2
+"set tabstop=4
+
+set mouse=
+
+"↓↓ Remove comments if vim-plug is installed ↓↓
+
 "   call plug#begin(stdpath('data') . '/plugged')
 "   
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -46,31 +65,3 @@
 "   nnoremap <localleader>n :NERDTreeToggle<CR>
 "   let g:NERDTreeWinSize = 45
 "   let g:NERDTreeWinPos = "right"
-
-"   ^ Remove comments if vim-plug is installed
-
-let maplocalleader = ","
-
-if (has('termguicolors'))
-  set termguicolors
-endif
-
-set number
-"See invisible characters
-set list listchars=tab:-→»,trail:ø,eol:↓
-
-"set expandtab
-"set autoindent
-"set softtabstop=4
-"set shiftwidth=2
-"set tabstop=4
-
-"   Enable mouse click for nvim or not
-set mouse=
-"   Fix cursor replacement after closing nvim
-"set guicursor=
-"   Shift + Tab does inverse tab
-"inoremap <S-Tab> <C-d>
-
-"   wrap to next line when end of line is reached
-"set whichwrap+=<,>,[,]

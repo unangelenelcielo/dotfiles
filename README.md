@@ -14,7 +14,7 @@ Currently you need to have mate desktop environment installed before running ins
 * mate-notification-daemon
 
 To-Do:
-- [*] Scripts to auto install dependencies based on diffenrent distros
+- [x] Scripts to auto install dependencies based on diffenrent distros
 - [ ] More color schemes and scripts to change them, currently only nord is available
 - [ ] Script to change font, currently iosevka is configured
 
